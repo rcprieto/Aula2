@@ -13,6 +13,7 @@ var AppComponent = (function () {
         this.pageHeader = "Lista de Empregados";
         this.firstName = 'Tom';
         this.lastName = 'Hap';
+        this.isDisabled = true; //para valores não string usar property binding [disabled]='isDisbled' e não {{}}
         this.imagemCaminho = 'http://gosoftwares.com.br/site/images/logoInicio.png';
     }
     AppComponent.prototype.getFullName = function () {
@@ -21,7 +22,7 @@ var AppComponent = (function () {
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: "<div><h1>Bom dia {{name}} {{getFullName()}}</h1>\n        \n                <h2>{{'Page Header: ' + pageHeader}}</h2>\n<img src='{{imagemCaminho}}' />\n                <my-employee></my-employee></div>",
+            template: "<div><h1>Bom dia {{name}} {{getFullName()}}</h1>\n        \n                <h2>{{'Page Header: ' + pageHeader}}</h2><br>\n<img src='{{imagemCaminho}}' />\n<br><br><button [disabled]='isDisabled' >Clicar</button>\n                <my-employee></my-employee></div>",
         })
     ], AppComponent);
     return AppComponent;
